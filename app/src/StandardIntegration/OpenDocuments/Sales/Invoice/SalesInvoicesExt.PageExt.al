@@ -1,0 +1,19 @@
+pageextension 53018 "PTE Sales Invoices Ext." extends "Sales Invoice List"
+{
+
+    layout
+    {
+        addfirst(factboxes)
+        {
+            part(MailLog; "PTE Mail Logs Fb")
+            {
+                ApplicationArea = All;
+            }
+        }
+    }
+    trigger OnAfterGetCurrRecord()
+    begin
+        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+    end;
+
+}
