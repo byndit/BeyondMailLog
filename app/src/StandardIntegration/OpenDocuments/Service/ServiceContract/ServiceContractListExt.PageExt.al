@@ -5,7 +5,7 @@ pageextension 53034 "PTE Service Contract List Ext." extends "Service Contract L
     {
         addfirst(factboxes)
         {
-            part(MailLog; "PTE Mail Logs Fb")
+            part(MailLog; "Sent Emails List Part")
             {
                 ApplicationArea = All;
             }
@@ -13,7 +13,7 @@ pageextension 53034 "PTE Service Contract List Ext." extends "Service Contract L
     }
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+        CurrPage.MailLog.Page.UpdateData(Rec);
     end;
 
 }

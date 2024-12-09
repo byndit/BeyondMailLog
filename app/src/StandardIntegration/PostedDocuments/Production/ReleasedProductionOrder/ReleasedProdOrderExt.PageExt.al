@@ -5,7 +5,7 @@ pageextension 53037 "PTE Released Prod. Order Ext." extends "Released Production
     {
         addfirst(factboxes)
         {
-            part(MailLog; "PTE Mail Logs Fb")
+            part(MailLog; "Sent Emails List Part")
             {
                 ApplicationArea = All;
             }
@@ -13,7 +13,7 @@ pageextension 53037 "PTE Released Prod. Order Ext." extends "Released Production
     }
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+        CurrPage.MailLog.Page.UpdateData(Rec);
     end;
 
 }

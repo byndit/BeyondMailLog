@@ -5,7 +5,7 @@ pageextension 53045 "PTE Pstd. Ret. Shipments Ext." extends "Posted Return Shipm
     {
         addfirst(factboxes)
         {
-            part(MailLog; "PTE Mail Logs Fb")
+            part(MailLog; "Sent Emails List Part")
             {
                 ApplicationArea = All;
             }
@@ -13,7 +13,7 @@ pageextension 53045 "PTE Pstd. Ret. Shipments Ext." extends "Posted Return Shipm
     }
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+        CurrPage.MailLog.Page.UpdateData(Rec);
     end;
 
 }

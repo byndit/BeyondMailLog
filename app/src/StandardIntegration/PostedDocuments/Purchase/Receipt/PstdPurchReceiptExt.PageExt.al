@@ -5,7 +5,7 @@ pageextension 53043 "PTE Pstd. Purch. Receipt Ext." extends "Posted Purchase Rec
     {
         addfirst(factboxes)
         {
-            part(MailLog; "PTE Mail Logs Fb")
+            part(MailLog; "Sent Emails List Part")
             {
                 ApplicationArea = All;
             }
@@ -13,7 +13,7 @@ pageextension 53043 "PTE Pstd. Purch. Receipt Ext." extends "Posted Purchase Rec
     }
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+        CurrPage.MailLog.Page.UpdateData(Rec);
     end;
 
 }

@@ -8,13 +8,14 @@
             "environmentType": "Sandbox",
             "environmentName": "Dev",
             "breakOnError": "All",
+            "startupObjectId": 143,
             "breakOnRecordWrite": "None",
             "enableSqlInformationDebugger": true,
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "startupObjectId": 53000,
-            "tenant": "me3n.de"
+            "tenant": "me3n.de",
+            "schemaUpdateMode": "Recreate"
         },
         {
             "name": "Your own server",

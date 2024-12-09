@@ -2,13 +2,18 @@
   "id": "28973c73-6da6-4241-8758-d66bdd0d2bd8",
   "name": "PTE Mail Log",
   "publisher": "BEYONDIT GmbH",
-  "version": "2024.12.0.0",
-  "brief": "Just log your outgoing mails to your customers centralized in BC",
-  "description": "Just log your outgoing mails to your customers centralized in BC",
+  "version": "1.0.0.0",
+  "brief": "Just show your outgoing mails.",
+  "description": "Just show your outgoing mails in all modules.",
   "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
+  "EULA": "https://www.beyond365.de/agb",
+  "help": "https://www.beyond365.de",
+  "supportedLocales": [
+    "de-DE",
+    "en-US"
+  ],
+  "url": "https://www.beyondit.gmbh/",
+  "logo": "app.png",
   "features": [
     "NoImplicitWith",
     "TranslationFile"

@@ -5,7 +5,7 @@ pageextension 53058 "PTE Pstd. Serv. Invoices Ext." extends "Posted Service Invo
     {
         addfirst(factboxes)
         {
-            part(MailLog; "PTE Mail Logs Fb")
+            part(MailLog; "Sent Emails List Part")
             {
                 ApplicationArea = All;
             }
@@ -13,7 +13,7 @@ pageextension 53058 "PTE Pstd. Serv. Invoices Ext." extends "Posted Service Invo
     }
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.MailLog.Page.SetRecID(Rec.RecordId());
+        CurrPage.MailLog.Page.UpdateData(Rec);
     end;
 
 }
