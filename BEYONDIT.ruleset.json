@@ -1,0 +1,44 @@
+{
+	"rules": [
+		{
+			"id": "AD0001",
+			"action": "None"
+		},
+		{
+			"id": "AA0215",
+			"action": "None"
+		},
+		{
+			"id": "AA0100",
+			"action": "None"
+		},
+		{
+			"id": "AS0011",
+			"action": "Warning",
+			"justification": "The identifier ‘{0}’ must have the prefix ‘{1}’."
+		},
+		{
+			"id": "AS0015",
+			"action": "None"
+		},
+		{
+			"id": "AS0051",
+			"action": "Info"
+		},
+		{
+			"id": "AA0214",
+			"action": "Hidden",
+			"justification": "Buggy, check https://github.com/microsoft/AL/issues/5665"
+		},
+		{
+			"id": "AS0084",
+			"action": "Hidden"
+		},
+		{
+			"id": "AA0072",
+			"action": "Hidden"
+		}
+	],
+	"name": "BEYONDIT",
+	"description": "Ruleset."
+}
