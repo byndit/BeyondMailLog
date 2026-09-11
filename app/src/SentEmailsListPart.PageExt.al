@@ -7,10 +7,10 @@ pageextension 53061 "PTE Sent Emails List Part" extends "Sent Emails List Part"
         EmptyGuid: Guid;
     begin
         if Rec.IsTemporary() then
-            Rec.DeleteAll();
+            Rec.DeleteAll(false);
         if not DataTypeManagement.GetRecordRef(Document, RecRef) then
             exit;
-        if GetSystemId(RecRef.Field(RecRef.SystemIdNo).Value) = EmptyGuid then begin
+        if GetSystemId(RecRef.Field(RecRef.SystemIdNo()).Value()) = EmptyGuid then begin
             CurrPage.Update(false);
             exit;
         end;
