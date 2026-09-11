@@ -1,5 +1,4 @@
 {
     "type":  "PTE",
-    "githubRunner": "windows-latest-8-cores",
     "templateUrl":  "https://github.com/microsoft/AL-Go-PTE@main"
 }
